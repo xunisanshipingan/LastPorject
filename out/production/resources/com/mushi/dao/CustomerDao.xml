@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.mushi.dao.CustomerDao">
+    <select id="findAllCustomer"  resultType="Customer">
+        select * from t_customer
+    </select>
+
+    <select id="findCustomerById" parameterType="Integer" resultType="Customer">
+        select * from t_customer where id = #{id}
+    </select>
+
+    <insert id="addCustomer" parameterType="Customer">
+        insert into t_customer (username,jobs,phone) values(#{username},#{jobs},#{phone})
+    </insert>
+
+    <delete id="delCustomer" parameterType="Integer">
+        delete from t_customer where id = #{id}
+    </delete>
+
+    <update id="updCustomer" parameterType="Customer">
+        update t_customer set id=#{id}, username=#{username} ,jobs=#{jobs},phone=#{phone} where id=#{id}
+    </update>
+</mapper>
