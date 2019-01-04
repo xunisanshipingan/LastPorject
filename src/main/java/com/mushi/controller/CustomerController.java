@@ -1,4 +1,4 @@
-package com.mushi.controller;
+﻿package com.mushi.controller;
 
 import com.mushi.pojo.Customer;
 import com.mushi.service.CustomerService;
@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
-
 
 @Controller
 public class CustomerController {
